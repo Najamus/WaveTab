@@ -31,8 +31,8 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
     
     private let waveSubLayer: CAShapeLayer = {
         let subLayer = CAShapeLayer()
-        subLayer.strokeColor = Constants.borderColor
-        subLayer.lineWidth = Constants.borderWidth
+//        subLayer.strokeColor = Constants.borderColor
+//        subLayer.lineWidth = Constants.borderWidth
         return subLayer
     }()
     
@@ -103,8 +103,8 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(width), height: CGFloat(width)))
         circle?.layer.cornerRadius = CGFloat(width) / 2
         circle?.center = CGPoint(x: tabBarItems[safeSelectedIndex].center.x, y: 0.0)
-        circle?.layer.borderWidth = Constants.borderWidth
-        circle?.layer.borderColor = Constants.borderColor
+//        circle?.layer.borderWidth = Constants.borderWidth
+//        circle?.layer.borderColor = Constants.borderColor
         tabBar.addSubview(circle!)
     }
     
@@ -126,8 +126,8 @@ open class WaveTabBarController: UITabBarController, WaveTabBarProtocol {
         } else {
             backgroundColor = getColorFromTabBarStyle()
         }
-        waveSubLayer.fillColor = backgroundColor.cgColor
-        circle?.backgroundColor = backgroundColor
+        waveSubLayer.fillColor = UIColor.white.cgColor
+        circle?.backgroundColor = .black
     }
     
     func setupTabBarBackground() {
